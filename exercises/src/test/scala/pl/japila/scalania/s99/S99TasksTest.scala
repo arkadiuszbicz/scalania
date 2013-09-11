@@ -46,6 +46,7 @@ class S99TasksTest extends mutable.Specification {
     "Eliminate consecutive duplicates of list elements." in {
       solution.p8(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) must listMatch( List('a, 'b, 'c, 'a, 'd, 'e) )
     }
+
     " Pack consecutive duplicates of list elements into sublists." in {
       solution.p9(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) must listMatch( List(List('a, 'a, 'a, 'a), List('b), List('c, 'c), List('a, 'a), List('d), List('e, 'e, 'e, 'e)))
     }
@@ -61,6 +62,7 @@ class S99TasksTest extends mutable.Specification {
     "Run-length encoding of a list (direct solution)." in {
       solution.p13(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) must listMatch( List((4,'a), (1,'b), (2,'c), (2,'a), (1,'d), (4,'e)) )
     }
+    /*
     " Duplicate the elements of a list." in {
       solution.p14(List('a, 'b, 'c, 'c, 'd)) must listMatch( List('a, 'a, 'b, 'b, 'c, 'c, 'c, 'c, 'd, 'd) )
     }
@@ -127,5 +129,6 @@ class S99TasksTest extends mutable.Specification {
     " Sorting a list of lists according to length of sublists." in {
       solution.p28(List(List('a, 'b, 'c), List('d, 'e), List('f, 'g, 'h), List('d, 'e), List('i, 'j, 'k, 'l), List('m, 'n), List('o))) must listMatch(  List(List('o), List('d, 'e), List('d, 'e), List('m, 'n), List('a, 'b, 'c), List('f, 'g, 'h), List('i, 'j, 'k, 'l)) )
     }
+    */
   }
 }
